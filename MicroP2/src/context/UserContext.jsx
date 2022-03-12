@@ -3,7 +3,9 @@ import { auth, db } from "../utils/firebase-config";
 
 export const UserContext = React.createContext(null);
 
+
 export default function UserContextProvider({ children }) {
+    
     const [user, setUser] = useState(null);
 
     const getUserProfile = async (email) => {
@@ -19,6 +21,7 @@ export default function UserContextProvider({ children }) {
         id: profile.id,
         ...profile.data(),
       };
+      
     };
 
     const createUser = async (userId, data) => {
@@ -38,7 +41,6 @@ export default function UserContextProvider({ children }) {
   
           if (!profile) { // Si no esta en la base de datos, lo envio a la base de datos con los datos recopilados necesarios
             profile = {
-              name: firebaseUser.displayName,
               email: firebaseUser.email,
               photo: firebaseUser.photoURL,
             };

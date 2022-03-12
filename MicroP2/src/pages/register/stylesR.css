@@ -1,0 +1,76 @@
+
+.reg{
+    width: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30em;  
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background-color: #271e70;
+}
+
+.headerReg{
+    font-size: 1.5em;
+    font-family: "Open Sans", sans-serif;
+    align-items: center;
+    color: beige;
+    position: relative;
+    top: -1em;
+}
+
+.form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.label {
+    font-size: 40px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;  
+    color: beige;
+    position: relative;
+    top: -1em;
+}
+
+input {
+    margin-top: 6px;
+    min-width: 18em;
+    height: 37px;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    background-color:white ;
+    border: 0;
+    border-radius: 4px;
+    margin-bottom: 29px;
+    transition: all 250ms ease-in-out;
+}
+
+.footerReg {
+    margin-top: 0.5em;
+    padding: 2em;
+}
+.btnReg{
+    width: 14em;
+    border-radius:4px;
+    font-family: "Open Sans", sans-serif;
+    background-color:#fbb040;
+    color: beige;
+    font-size: 1em;
+}
+
+.mensajeR{
+    color: red;
+    position: relative;
+    top: -2em;
+}

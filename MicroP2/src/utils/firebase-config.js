@@ -22,5 +22,7 @@ export const db = app.firestore();
 
 // Authentication instance
 export const auth = app.auth();
-// //Proveedor de Google
-// export const googleProvider = new firebase.auth.GoogleAuthProvider();
+//Proveedor de Google
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
+//Proveedor de Email
+export const emailProvider = new firebase.auth.EmailAuthProvider();
