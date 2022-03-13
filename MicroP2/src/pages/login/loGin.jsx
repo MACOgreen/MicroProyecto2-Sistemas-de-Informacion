@@ -76,7 +76,7 @@ export default function loGin() {
   },[])
   return (
     <div className='login'>
-      <div className= 'content'> 
+      <div className= 'content1'> 
           <h1 className='header'>Inicio de sesión</h1>
           <form className='form'onSubmit={handleSubmit((data)=>{regisNormal(data)})}>
 

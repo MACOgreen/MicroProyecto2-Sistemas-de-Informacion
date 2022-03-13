@@ -1,9 +1,9 @@
 
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Lista8 from "./lista8";
-import Estrenos from"./estrenos";
-export default function homePage() {
+import "./disenios.css";
+export default function Lista8() {
+
   const [pelis, setPelis] = useState([]);
   var contador=0;
   const ObtenerPelis= async()=>{ 
@@ -16,13 +16,13 @@ export default function homePage() {
           for( let i =0;i<8; i++){
             arreglos.push({ ...response.data.results[i]});
           }
-          console.log(arreglos);
+          //console.log(arreglos);
           setPelis(arreglos);
 
         }catch(error){
           console.log({ error });
         }
-  }
+   }
 
 
 
@@ -30,16 +30,19 @@ export default function homePage() {
     ObtenerPelis();
   }, []);
 
-
-
   return (
-    <div>   
-       < Lista8/>
-       <Estrenos/>
-    </div>   
-
-     
-    
+    <div>
+      <ul>
+        <h1 className="titulo">  Tedencias  </h1>
+      {pelis.map((peli) => (
+          <li>
+            <img src={peli.poster_path}></img>
+            <h3>{peli.title}</h3>
+            <h3>Lenguaje original: {peli.original_language}</h3>
+            <h3> Putuacion: {peli.vote_average}</h3>
+          </li>
+        ))}
+       </ul> 
+    </div>
   )
-  
 }
