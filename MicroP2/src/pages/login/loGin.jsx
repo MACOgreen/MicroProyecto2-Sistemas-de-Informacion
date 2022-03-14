@@ -2,11 +2,10 @@
 import './stylesRL.css';
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import {useEffect} from "react/cjs/react.development";
 import { useState} from "react";
 import {db,auth,googleProvider}  from "../../utils/firebase-config";
 import { UserContext } from "../../context/UserContext";
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 
 
 export default function loGin() {

@@ -1,11 +1,11 @@
 import React from 'react'
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import {useForm } from "react-hook-form";
 import { useState} from "react";
 import './stylesR.css';
 import {db,auth,googleProvider,emailProvider}  from "../../utils/firebase-config";
 
-import {useEffect} from "react/cjs/react.development";
+
 
 import { v4 as uuidv4 } from 'uuid';  // Import para generar ID para los usuarios de formulario.
 import { useNavigate } from "react-router-dom";
